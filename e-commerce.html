@@ -14,7 +14,6 @@
 <section class="project" id="ecommerce">
   <h2>E-commerce Section</h2>
   <div id="product-list"></div>
-  <button onclick="viewEcommerceProject()">View Project</button>
 </section>
 
 <!-- Include e-commerce.js script -->
@@ -22,29 +21,3 @@
 
 </body>
 </html>
-
-
-  // Render products
-  const productList = document.getElementById('product-list');
-
-  products.forEach(product => {
-    const productElement = document.createElement('div');
-    productElement.className = 'product-item';
-    productElement.innerHTML = `
-      <h3>${product.name}</h3>
-      <p>${product.price.toFixed(2)} USD</p>
-      <button onclick="addToCart(${product.id})">Add to Cart</button>
-    `;
-    productList.appendChild(productElement);
-  });
-});
-
-// Function to simulate adding a product to the cart
-function addToCart(productId) {
-  alert(`Product with ID ${productId} added to cart! (Simulated)`);
-}
-
-// Function to handle "View Project" button click
-function viewEcommerceProject() {
-  alert('Redirecting to the E-commerce project page! (Simulated)');
-}
