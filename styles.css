@@ -13,13 +13,12 @@ header {
 
 main {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   padding: 1em;
 }
 
-.product {
+.project {
   border: 1px solid #ccc;
   border-radius: 8px;
   margin: 1em;
