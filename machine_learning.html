@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="machine_learning.css">
     <!-- Add your Highlight.js stylesheet link here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/styles/default.min.css">
+    <!-- Add Particles.js stylesheet link here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.css">
 </head>
 <body>
     <!-- Add particle.js container -->
@@ -47,21 +49,24 @@
 
             # Evaluate the model
             accuracy = accuracy_score(y_test, y_pred)
-            print(f"Accuracy: {accuracy:.2f}")
+            console.log(f"Accuracy: {accuracy:.2f}");
 
             # Display classification report
-            print("Classification Report:")
-            print(classification_report(y_test, y_pred))
+            console.log("Classification Report:");
+            console.log(classification_report(y_test, y_pred));
 
             # Visualize the Decision Tree
-            plt.figure(figsize=(12, 8))
-            plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True)
+            plt.figure(figsize=(12, 8));
+            plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True);
             plt.show();
         </code></pre>
     </section>
 
+    <!-- Back button to return to index.html -->
+    <a href="index.html" class="back-button">Back</a>
+
     <!-- Add script to initialize Highlight.js and particle.js -->
-    <script src="particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/highlight.min.js" defer></script>
     <script>
         // Initialize Highlight.js
