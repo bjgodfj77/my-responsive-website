@@ -52,7 +52,42 @@
         <h2>Code Embedding</h2>
         <p>Embed code snippets with syntax highlighting to illustrate key points.</p>
         <pre><code class="python">
-            <!-- ... (your code) ... -->
+            # Import necessary libraries
+            from sklearn.datasets import load_iris
+            from sklearn.model_selection import train_test_split
+            from sklearn.tree import DecisionTreeClassifier
+            from sklearn.metrics import accuracy_score, classification_report
+            import matplotlib.pyplot as plt
+            from sklearn.tree import plot_tree
+
+            # Load Iris dataset
+            iris = load_iris()
+            X = iris.data
+            y = iris.target
+
+            # Split the dataset into training and testing sets
+            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+            # Train a Decision Tree classifier
+            clf = DecisionTreeClassifier(random_state=42)
+            clf.fit(X_train, y_train)
+
+            # Make predictions on the test set
+            y_pred = clf.predict(X_test)
+
+            # Evaluate the model
+            accuracy = accuracy_score(y_test, y_pred)
+            print(f"Accuracy: {accuracy:.2f}")
+
+            # Display classification report
+            print("Classification Report:")
+            print(classification_report(y_test, y_pred))
+
+            # Visualize the Decision Tree
+            plt.figure(figsize=(12, 8))
+            plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True)
+            plt.show()
+
         </code></pre>
     </section>
 
@@ -62,14 +97,51 @@
         <img src="machine_learning_visual.png" alt="Visualization Image" style="max-width: 100%; height: auto;">
         <!-- Add additional visualizations or descriptions here -->
     </section>
-    
-    <!-- Add particle.js script -->
-    <script src="particles.js"></script>
     <script>
         // Initialize particle.js
         particlesJS('particles-js', {
-            // Add particle.js configuration here
+            particles: {
+                number: {
+                    value: 80, // Adjust the number of particles
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                size: {
+                    value: 3 // Adjust the size of particles
+                },
+                color: {
+                    value: "#2e3fff" // Set the color of particles
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#2e3fff",
+                    opacity: 0.4
+                },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    }
+                }
+            }
         });
+    </script>
+
     </script>
 
 </body>
