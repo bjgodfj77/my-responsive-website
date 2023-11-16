@@ -1,35 +1,37 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #2ecc71;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1em;
-  }
-  
-  .app-feature {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin: 1em;
-    padding: 1em;
-    text-align: center;
-  }
-  
-  footer {
-    background-color: #2ecc71;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Updated background color */
+  color: #333; /* Updated text color */
+}
+
+header {
+  background-color: #2e3fff; /* Updated header background color */
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+}
+
+.app-feature {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 1em;
+  padding: 1em;
+  text-align: center;
+  background-color: #fff; /* Updated background color for app-feature */
+}
+
+footer {
+  background-color: #2e3fff; /* Updated footer background color */
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
