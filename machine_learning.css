@@ -32,9 +32,9 @@ pre {
 }
 
 .back-button {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     padding: 10px;
     background-color: #2e3fff;
     color: #ffffff;
