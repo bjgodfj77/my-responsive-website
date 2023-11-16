@@ -10,6 +10,7 @@
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
+            overflow: hidden; /* Hide overflow to prevent particles from covering content */
         }
 
         header {
@@ -17,16 +18,13 @@
             color: #ffffff;
             padding: 20px;
             text-align: center;
+            z-index: 1; /* Ensure header is on top of particles */
         }
 
         section {
             padding: 40px;
-        }
-
-        /* Add hover effect */
-        section:hover {
-            background-color: #2e3fff;
-            color: #ffffff;
+            position: relative; /* Establish positioning context for z-index */
+            z-index: 2; /* Ensure sections are on top of particles */
         }
 
         /* Add particle.js container */
@@ -34,6 +32,7 @@
             position: absolute;
             width: 100%;
             height: 100%;
+            z-index: -1; /* Set z-index to place particles behind content */
         }
     </style>
 </head>
@@ -84,7 +83,7 @@
             # Visualize the Decision Tree
             plt.figure(figsize=(12, 8))
             plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True)
-            plt.show()
+            plt.show();
 
         </code></pre>
     </section>
@@ -97,7 +96,6 @@
     </section>
 
     <script src="particles.js"></script>
-
     <script>
         // Initialize particle.js
         particlesJS('particles-js', {
@@ -135,14 +133,12 @@
                 detect_on: "canvas",
                 events: {
                     onhover: {
-                        enable: true,
+                        enable: false, // Disable hover effect
                         mode: "grab"
                     }
                 }
             }
         });
-    </script>
-
     </script>
 
 </body>
