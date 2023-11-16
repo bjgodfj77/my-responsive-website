@@ -6,76 +6,71 @@
     <title>Machine Learning Project</title>
     <!-- Add your CSS styles here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        header {
+            background-color: #2e3fff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px;
+        }
+
+        /* Add hover effect */
+        section:hover {
+            background-color: #2e3fff;
+            color: #ffffff;
+        }
+
+        /* Add particle.js container */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
+    <!-- Add particle.js container -->
+    <div id="particles-js"></div>
+
     <header>
         <h1>Machine Learning Project</h1>
         <p>Explore the details of my machine learning project, including code snippets and results.</p>
     </header>
 
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>Provide a brief introduction to the project.</p>
-    </section>
-
-    <section id="project-overview">
-        <h2>Project Overview</h2>
-        <p>Summarize the key components and achievements of the project.</p>
-    </section>
+    <!-- ... (previous sections) ... -->
 
     <section id="code-embedding">
         <h2>Code Embedding</h2>
         <p>Embed code snippets with syntax highlighting to illustrate key points.</p>
         <pre><code class="python">
-# Import necessary libraries
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.metrics import accuracy_score, classification_report
-import matplotlib.pyplot as plt
-from sklearn.tree import plot_tree
-
-# Load Iris dataset
-iris = load_iris()
-X = iris.data
-y = iris.target
-
-# Split the dataset into training and testing sets
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-
-# Train a Decision Tree classifier
-clf = DecisionTreeClassifier(random_state=42)
-clf.fit(X_train, y_train)
-
-# Make predictions on the test set
-y_pred = clf.predict(X_test)
-
-# Evaluate the model
-accuracy = accuracy_score(y_test, y_pred)
-print(f"Accuracy: {accuracy:.2f}")
-
-# Display classification report
-print("Classification Report:")
-print(classification_report(y_test, y_pred))
-
-# Visualize the Decision Tree
-plt.figure(figsize=(12, 8))
-plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True)
-plt.show()
+            <!-- ... (your code) ... -->
         </code></pre>
     </section>
 
     <section id="visualizations">
         <h2>Visualizations</h2>
         <p>Include charts, graphs, or diagrams generated from your code.</p>
-    
-        <!-- Add an image -->
-        <img src="path/to/your/image.jpg" alt="Visualization Image" style="max-width: 100%; height: auto;">
-    
+        <img src="machine_learning_visual.png" alt="Visualization Image" style="max-width: 100%; height: auto;">
         <!-- Add additional visualizations or descriptions here -->
     </section>
+    
+    <!-- Add particle.js script -->
+    <script src="particles.js"></script>
+    <script>
+        // Initialize particle.js
+        particlesJS('particles-js', {
+            // Add particle.js configuration here
+        });
+    </script>
 
 </body>
 </html>
