@@ -6,38 +6,8 @@
     <title>Machine Learning Project</title>
     <!-- Link to your external CSS file -->
     <link rel="stylesheet" href="machine_learning.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/highlight.min.js"></script>
-    <!-- Add your CSS styles here -->
+    <!-- Add your Highlight.js stylesheet link here -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/styles/default.min.css">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            overflow: hidden; /* Hide overflow to prevent particles from covering content */
-        }
-
-        header {
-            background-color: #2e3fff;
-            color: #ffffff;
-            padding: 20px;
-            text-align: center;
-            z-index: 1; /* Ensure header is on top of particles */
-        }
-
-        section {
-            padding: 40px;
-            position: relative; /* Establish positioning context for z-index */
-            z-index: 2; /* Ensure sections are on top of particles */
-        }
-
-        /* Add particle.js container */
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Set z-index to place particles behind content */
-        }
-    </style>
 </head>
 <body>
     <!-- Add particle.js container -->
@@ -87,44 +57,35 @@
             plt.figure(figsize=(12, 8))
             plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True)
             plt.show();
-
         </code></pre>
-
-        <script>
-            // Initialize Highlight.js
-            document.addEventListener('DOMContentLoaded', (event) => {
-                document.querySelectorAll('code').forEach((block) => {
-                    hljs.highlightBlock(block);
-                });
-            });
-        </script>
-        
     </section>
 
-    <section id="visualizations">
-        <h2>Visualizations</h2>
-        <p>Include charts, graphs, or diagrams generated from your code.</p>
-        <img src="machine_learning_visual.png" alt="Visualization Image" style="max-width: 100%; height: auto;">
-        <!-- Add additional visualizations or descriptions here -->
-    </section>
-
+    <!-- Add script to initialize Highlight.js and particle.js -->
     <script src="particles.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/highlight.min.js" defer></script>
     <script>
+        // Initialize Highlight.js
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
         // Initialize particle.js
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 80, // Adjust the number of particles
+                    value: 80,
                     density: {
                         enable: true,
                         value_area: 800
                     }
                 },
                 size: {
-                    value: 3 // Adjust the size of particles
+                    value: 3
                 },
                 color: {
-                    value: "#2e3fff" // Set the color of particles
+                    value: "#2e3fff"
                 },
                 line_linked: {
                     enable: true,
@@ -146,7 +107,7 @@
                 detect_on: "canvas",
                 events: {
                     onhover: {
-                        enable: false, // Disable hover effect
+                        enable: false,
                         mode: "grab"
                     }
                 }
