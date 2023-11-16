@@ -28,14 +28,14 @@ input {
 
 button {
 	padding: 8px 12px;
-	background-color: #4caf50;
+	background-color: #2e3fff;
 	color: #fff;
 	border: none;
 	cursor: pointer;
 }
 
 button:hover {
-	background-color: #45a049;
+	background-color: #2e3fff;
 }
 
 ul {
