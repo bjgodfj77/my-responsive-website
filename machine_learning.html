@@ -44,22 +44,31 @@
             clf = DecisionTreeClassifier(random_state=42)
             clf.fit(X_train, y_train)
 
-            # Make predictions on the test set
-            y_pred = clf.predict(X_test)
+            // Make predictions on the test set
+            y_pred = clf.predict(X_test);
 
-            # Evaluate the model
-            accuracy = accuracy_score(y_test, y_pred)
-            console.log(f"Accuracy: {accuracy:.2f}");
+            // Evaluate the model
+            // Note: Use alert for demonstration. In a real environment, you might use other methods to display information.
+            alert("Accuracy: " + (accuracy_score(y_test, y_pred)).toFixed(2));
 
-            # Display classification report
-            console.log("Classification Report:");
-            console.log(classification_report(y_test, y_pred));
+            // Display classification report
+            // Note: Use alert for demonstration. In a real environment, you might use other methods to display information.
+            alert("Classification Report:\n" + classification_report(y_test, y_pred));
 
-            # Visualize the Decision Tree
-            plt.figure(figsize=(12, 8));
-            plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True);
-            plt.show();
+            // Visualize the Decision Tree and save as an image
+            plt.figure(figsize=(12, 8))
+            plot_tree(clf, feature_names=iris.feature_names, class_names=iris.target_names, filled=True, rounded=True)
+            plt.savefig('machine_learning_visual.png')  // Save the visualization as an image
+            plt.close()  // Close the plot to prevent it from being displayed
         </code></pre>
+    </section>
+
+    <!-- Visualizations -->
+    <section id="visualizations">
+        <h2>Visualizations</h2>
+        <p>Include charts, graphs, or diagrams generated from your code.</p>
+        <img src="machine_learning_visual.png" alt="Machine Learning Visualization" style="max-width: 100%; height: auto;">
+        <!-- Add additional visualizations or descriptions here -->
     </section>
 
     <!-- Back button to return to index.html -->
