@@ -4,45 +4,46 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #f4f4f4;
-  }
-  
-  .container {
+	background-color: #2e3fff; /* Update the background color */
+	color: #fff; /* Update the text color */
+}
+
+.container {
 	max-width: 600px;
 	margin: 20px auto;
 	background-color: #fff;
 	padding: 20px;
 	border-radius: 5px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  #app {
+}
+
+#app {
 	margin-top: 20px;
-  }
-  
-  input {
+}
+
+input {
 	padding: 8px;
 	margin-bottom: 10px;
-  }
-  
-  button {
+}
+
+button {
 	padding: 8px 12px;
 	background-color: #4caf50;
 	color: #fff;
 	border: none;
 	cursor: pointer;
-  }
-  
-  button:hover {
+}
+
+button:hover {
 	background-color: #45a049;
-  }
-  
-  ul {
+}
+
+ul {
 	list-style-type: none;
 	padding: 0;
-  }
-  
-  li {
+}
+
+li {
 	margin-bottom: 8px;
 	padding: 8px;
 	background-color: #dff0d8;
@@ -51,9 +52,4 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-  }
-  body {
-	font-family: 'Roboto', sans-serif;
-	margin: 0;
-	padding: 0;
-  }
+}
