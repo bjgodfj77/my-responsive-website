@@ -41,6 +41,8 @@
     <div id="particles-js"></div>
 
     <header>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.8.0/highlight.min.js"></script>
+
         <h1>Machine Learning Project</h1>
         <p>Explore the details of my machine learning project, including code snippets and results.</p>
     </header>
@@ -86,6 +88,16 @@
             plt.show();
 
         </code></pre>
+
+        <script>
+            // Initialize Highlight.js
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+            });
+        </script>
+        
     </section>
 
     <section id="visualizations">
